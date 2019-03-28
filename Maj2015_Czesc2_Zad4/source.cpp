@@ -127,6 +127,8 @@ auto zapisz_dane(const std::string& nazwa_pliku, const std::vector<std::string>&
 		int min_idx = 0, max_idx = 0;
 		std::tie(min_idx, max_idx) = min_max(dane);
 		zapis << "MIN = " << min_idx << ", MAX = " << max_idx << std::endl;
+		
+		zapis.close();
 	}
 	else {
 		std::cout << "Blad polaczenia z plikiem " << nazwa_pliku << std::endl;
